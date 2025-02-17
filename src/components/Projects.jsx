@@ -1,29 +1,23 @@
 import React from "react";
-import employeeMSImage from "../assets/employee-ms.png";
-import bookMSImage from "../assets/admin-dashboard.png";
+import Myportfolio from "../assets/Screenshot (60).png";
+import leetcode from "../assets/leetcode.avif";
+
 
 const projects = [
   {
     id: 1,
-    name: "Employee MS",
-    technologies: "MERN Stack",
-    image: employeeMSImage,
-    github: "https://github.com/YouafKhan1",
+    name: "Myportfolio",
+    technologies: "Html-CSS",
+    image: Myportfolio,
+    github: "https://github.com/Ojhanaveen/Myportfolio",
   },
   {
     id: 2,
-    name: "Blog App",
-    technologies: "MERN Stack",
-    image: bookMSImage,
-    github: "https://github.com/YouafKhan1",
-  },
-  {
-    id: 3,
-    name: "Book MS",
-    technologies: "MERN Stack",
-    image: employeeMSImage,
-    github: "https://github.com/YouafKhan1",
-  },
+    name: "DSA_Leetcode",
+    technologies: "Language-JavaScript",
+    image: leetcode,
+    github: "https://github.com/Ojhanaveen/DSA_Leetcode"
+  }
 ];
 
 const Projects = () => {

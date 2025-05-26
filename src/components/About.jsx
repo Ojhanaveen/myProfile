@@ -60,7 +60,7 @@ const About = () => {
                 bg-gradient-to-r from-green-400 to-blue-500">
                        Fresher
                     </h3>
-                    <p>Years Experience</p>
+                    <p>Experience</p>
                 </div>
                 <div>
                     <h3 className="text-2xl font-bold text-transparent bg-clip-text 

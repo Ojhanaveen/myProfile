@@ -9,7 +9,7 @@ const Hero = () => {
   }
 
   const handleResumeClick = () => {
-    window.open('/Resume (1).pdf', '_blank')
+    window.open('/Portfolio-React-Tailwind/public/Naveen--Resume.pdf', '_blank')
   }
 
   return (

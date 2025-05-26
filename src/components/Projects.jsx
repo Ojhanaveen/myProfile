@@ -9,7 +9,7 @@ const projects = [
     name: "Myportfolio",
     technologies: "Html-CSS",
     image: Myportfolio,
-    github: "https://github.com/Ojhanaveen/Myportfolio",
+    github: "https://ojhanaveen.github.io/Myportfolio",
   },
   {
     id: 2,

@@ -1,6 +1,9 @@
 import React from "react";
 import Myportfolio from "../assets/Screenshot (60).png";
 import leetcode from "../assets/leetcode.avif";
+import Xquize from "../assets/Screenshot (118).png"
+import Xcruise from "../assets/Screenshot (119).png"
+import { name } from "ejs";
 
 
 const projects = [
@@ -17,6 +20,20 @@ const projects = [
     technologies: "Language-JavaScript",
     image: leetcode,
     github: "https://github.com/Ojhanaveen/DSA_Leetcode"
+  },
+  {
+    id:3,
+    name:"Xcruise",
+    technologies:"Html-CSS",
+    image:Xcruise,
+    github:"https://naveen-me-fe-buildout-xcruise.vercel.app/"
+  },
+  {
+    id:4,
+    name:"Xquize",
+    technologies:"Html-CSS-JavaScript",
+    image:Xquize,
+    github:"https://naveen-me-fe-buildout-xquizfe.vercel.app/"
   }
 ];
 

@@ -3,7 +3,6 @@ import Myportfolio from "../assets/Screenshot (60).png";
 import leetcode from "../assets/leetcode.avif";
 import Xquize from "../assets/Screenshot (118).png"
 import Xcruise from "../assets/Screenshot (119).png"
-import { name } from "ejs";
 
 
 const projects = [

@@ -40,7 +40,7 @@ const projects = [
     name:"Q-kart",
     technologies: "ReactJS, MateralUI",
     image: Qkart,
-    github:"qkart-henna-iota.vercel.app"
+    github:"https://qkart-henna-iota.vercel.app/"
   }
 ];
 

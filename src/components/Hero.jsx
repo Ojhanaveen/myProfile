@@ -9,7 +9,7 @@ const Hero = () => {
   }
 
   const handleResumeClick = () => {
-    window.open('/Naveen--Resume.pdf', '_blank')
+    window.open('/Naveen_New.pdf', '_blank')
   }
 
   return (

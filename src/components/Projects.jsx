@@ -3,7 +3,7 @@ import Myportfolio from "../assets/Screenshot (60).png";
 import leetcode from "../assets/leetcode.avif";
 import Xquize from "../assets/Screenshot (118).png"
 import Xcruise from "../assets/Screenshot (119).png"
-import Qkart from "../assets/Screenshot 2025-07-17 125013.png"
+import Qkart from "../assets/qkart.png"
 
 
 const projects = [

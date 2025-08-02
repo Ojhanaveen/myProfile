@@ -3,6 +3,7 @@ import Myportfolio from "../assets/Screenshot (60).png";
 import leetcode from "../assets/leetcode.avif";
 import Xquize from "../assets/Screenshot (118).png"
 import Xcruise from "../assets/Screenshot (119).png"
+import Qkart from "../assets/Screenshot 2025-07-17 125013.png"
 
 
 const projects = [
@@ -33,6 +34,13 @@ const projects = [
     technologies:"Html-CSS-JavaScript",
     image:Xquize,
     github:"https://naveen-me-fe-buildout-xquizfe.vercel.app/"
+  },
+  {
+    id:5,
+    name:"Q-kart",
+    technologies: "ReactJS, MateralUI",
+    image: Qkart,
+    github:"qkart-henna-iota.vercel.app"
   }
 ];
 

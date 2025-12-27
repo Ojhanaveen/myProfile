@@ -36,7 +36,7 @@ const Footer = () => {
           justify-between items-center"
         >
           <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} Naveen kumar. All rights reserved.
+            &copy; {new Date().getFullYear()} Naveen Kumar. All rights reserved.
           </p>
           <div className="flex space-x-4 my-4 md:my-0">
            

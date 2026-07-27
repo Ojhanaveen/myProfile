@@ -6,16 +6,18 @@ import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
-import Service from './components/Service'
+import Skills from './components/Skills'
+import Experience from './components/Experience'
 
 function App() {
 
   return (
-    <div>
+    <div className="bg-cream-50">
         <Navbar />
         <Hero />
         <About />
-        <Service />
+        <Skills />
+        <Experience />
         <Projects />
         <Contact />
         <Footer />

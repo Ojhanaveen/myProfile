@@ -1,64 +1,37 @@
-import React from "react";
-import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import React from 'react'
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-8">
-      <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <div className="flex flex-col md:flex-row md:space-x-12 items-center mb-4">
-          <div className="flex-1 mb-4 md:mb-0">
-            <h3 className="text-2xl font-bold mb-2">Naveen Kumar</h3>
-            <p className="text-gray-400">
-              An enthusiatic learner with passion in Development.
-            </p>
+    <footer className="bg-cream-50 text-ink-900 py-10 border-t border-ink-900/10">
+      <div className="container mx-auto px-6 md:px-16 lg:px-24">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="text-center md:text-left">
+            <h3 className="text-xl font-bold">Naveen Kumar</h3>
+            <p className="text-ink-700/60 text-sm mt-1">Software Engineer · React.js · Node.js · Python</p>
           </div>
-          <div className="flex-1 w-full">
-            <form className="flex items-center justify-center">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="w-full p-2 rounded-l-lg bg-gray-800 border border-gray-600 
-                focus:outline-none focus:border-green-400"
-              />
-              <button
-                type="submit"
-                className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 
-                py-2 rounded-r-lg"
-              >
-                Subscribe
-              </button>
-            </form>
+
+          <div className="flex items-center gap-4">
+            <a href="https://www.linkedin.com/in/naveenkr1/" target="_blank" rel="noopener noreferrer" className="text-ink-700/60 hover:text-clay-600 transition-colors text-lg">
+              <FaLinkedin />
+            </a>
+            <a href="https://github.com/Ojhanaveen" target="_blank" rel="noopener noreferrer" className="text-ink-700/60 hover:text-clay-600 transition-colors text-lg">
+              <FaGithub />
+            </a>
+            <a href="mailto:nk9411123@gmail.com" className="text-ink-700/60 hover:text-clay-600 transition-colors text-lg">
+              <FaEnvelope />
+            </a>
           </div>
         </div>
 
-        <div
-          className="border-t border-gray-600 pt-4 flex flex-col md:flex-row 
-          justify-between items-center"
-        >
-          <p className="text-gray-400">
+        <div className="border-t border-ink-900/10 mt-6 pt-6 text-center">
+          <p className="text-ink-700/40 text-sm">
             &copy; {new Date().getFullYear()} Naveen Kumar. All rights reserved.
           </p>
-          <div className="flex space-x-4 my-4 md:my-0">
-           
-            <a href="www.linkedin.com/in/naveenkr1" className="text-gray-400 hover:text-white">
-              <FaLinkedin />
-            </a>
-            <a href="https://github.com/Ojhanaveen" className="text-gray-400 hover:text-white">
-              <FaGithub />
-            </a>
-          </div>
-          <div className="flex space-x-4">
-            <a href="#" className="text-gray-400 hover:text-white">
-              Privacy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              Terms of Service
-            </a>
-          </div>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

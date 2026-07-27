@@ -1,12 +1,16 @@
-import React, { useRef } from 'react';
-import { FaEnvelope, FaMapMarkedAlt, FaPhone } from 'react-icons/fa';
-import emailjs from '@emailjs/browser';
+import React, { useRef, useState } from 'react'
+import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaGithub, FaLinkedin } from 'react-icons/fa'
+import emailjs from '@emailjs/browser'
+import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const Contact = () => {
-  const form = useRef();
+  const form = useRef()
+  const containerRef = useScrollReveal()
+  const [status, setStatus] = useState('idle')
 
   const handleSendClick = (e) => {
-    e.preventDefault();
+    e.preventDefault()
+    setStatus('sending')
 
     emailjs
       .sendForm(
@@ -16,82 +20,122 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
-        (result) => {
-          alert('Message sent successfully!');
-          console.log(result.text);
-          form.current.reset(); 
+        () => {
+          setStatus('sent')
+          form.current.reset()
+          setTimeout(() => setStatus('idle'), 4000)
         },
-        (error) => {
-          alert('Failed to send message. Please try again.');
-          console.log(error.text);
+        () => {
+          setStatus('error')
+          setTimeout(() => setStatus('idle'), 4000)
         }
-      );
-  };
+      )
+  }
 
   return (
-    <div className="bg-black text-white py-20" id="contact">
-      <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-bold text-center mb-12">Contact Me</h2>
-        <div className="flex flex-col md:flex-row items-center md:space-x-12">
-          <div className="flex-1">
-            <h3 className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 mb-4'>Let's Talk</h3>
-            <p>I'm open to discussing web development projects or partnership opportunities.</p>
-            <div className='mb-4 mt-8'>
-              <FaEnvelope className='inline-block text-green-400 mr-2' />
-              <a href="mailto:nk9411123@gmail.com" className='hover:underline'>nk9411123@gmail.com</a>
+    <div className="bg-cream-50 text-ink-900 py-24" id="contact" ref={containerRef}>
+      <div className="container mx-auto px-6 md:px-16 lg:px-24">
+        <h2 className="reveal-up text-4xl font-bold text-center mb-16">
+          Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-clay-500 to-clay-700">Touch</span>
+        </h2>
+        <div className="flex flex-col md:flex-row items-start gap-12">
+          <div className="reveal-up flex-1">
+            <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-clay-500 to-clay-700 mb-4">
+              Let's Talk
+            </h3>
+            <p className="text-ink-700/80 mb-8">
+              I'm open to discussing software engineering roles, web development projects, or
+              partnership opportunities.
+            </p>
+            <div className="space-y-4">
+              <a href="mailto:nk9411123@gmail.com" className="flex items-center gap-3 text-ink-700/80 hover:text-clay-600 transition-colors">
+                <span className="w-9 h-9 rounded-full bg-ink-900/5 border border-ink-900/10 flex items-center justify-center text-clay-600">
+                  <FaEnvelope />
+                </span>
+                nk9411123@gmail.com
+              </a>
+              <a href="tel:+917319831666" className="flex items-center gap-3 text-ink-700/80 hover:text-clay-600 transition-colors">
+                <span className="w-9 h-9 rounded-full bg-ink-900/5 border border-ink-900/10 flex items-center justify-center text-clay-600">
+                  <FaPhone />
+                </span>
+                +91 7319831666
+              </a>
+              <div className="flex items-center gap-3 text-ink-700/80">
+                <span className="w-9 h-9 rounded-full bg-ink-900/5 border border-ink-900/10 flex items-center justify-center text-clay-600">
+                  <FaMapMarkerAlt />
+                </span>
+                Navi Mumbai, Maharashtra
+              </div>
             </div>
-            <div className='mb-4'>
-              <FaPhone className='inline-block text-green-400 mr-2' />
-              <span>+917033051916</span>
-            </div>
-            <div className='mb-4'>
-              <FaMapMarkedAlt className='inline-block text-green-400 mr-2' />
-              <span>Navi Mumbai, Maharashtra</span>
+
+            <div className="flex items-center gap-4 mt-8">
+              <a
+                href="https://github.com/Ojhanaveen"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 rounded-full bg-ink-900/5 border border-ink-900/10 flex items-center justify-center text-xl transition-all duration-300 hover:border-clay-500/40 hover:-translate-y-1"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/naveenkr1/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 rounded-full bg-ink-900/5 border border-ink-900/10 flex items-center justify-center text-xl transition-all duration-300 hover:border-clay-500/40 hover:-translate-y-1"
+              >
+                <FaLinkedin />
+              </a>
             </div>
           </div>
-          <div className='flex-1 w-full'>
-            <form ref={form} onSubmit={handleSendClick} className='space-y-4'>
+
+          <div className="reveal-up flex-1 w-full">
+            <form ref={form} onSubmit={handleSendClick} className="space-y-4 rounded-2xl border border-ink-900/10 bg-ink-900/5 backdrop-blur-sm p-6">
               <div>
-                <label htmlFor="name" className='block mb-2'>Your Name</label>
-                <input 
-                  type="text" 
-                  name="user_name" 
-                  className='w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-green-400'
-                  placeholder='Enter Your Name'
+                <label htmlFor="user_name" className="block mb-2 text-sm text-ink-700/80">Your Name</label>
+                <input
+                  id="user_name"
+                  type="text"
+                  name="user_name"
+                  className="w-full p-3 rounded-lg bg-cream-50 border border-ink-900/10 focus:outline-none focus:border-clay-500 transition-colors"
+                  placeholder="Enter your name"
                   required
                 />
               </div>
               <div>
-                <label htmlFor="email" className='block mb-2'>Email</label>
-                <input 
-                  type="email" 
-                  name="user_email" 
-                  className='w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-green-400'
-                  placeholder='Enter Your Email'
+                <label htmlFor="user_email" className="block mb-2 text-sm text-ink-700/80">Email</label>
+                <input
+                  id="user_email"
+                  type="email"
+                  name="user_email"
+                  className="w-full p-3 rounded-lg bg-cream-50 border border-ink-900/10 focus:outline-none focus:border-clay-500 transition-colors"
+                  placeholder="Enter your email"
                   required
                 />
               </div>
               <div>
-                <label htmlFor="message" className='block mb-2'>Message</label>
-                <textarea 
+                <label htmlFor="message" className="block mb-2 text-sm text-ink-700/80">Message</label>
+                <textarea
+                  id="message"
                   name="message"
-                  className='w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-green-400'
+                  className="w-full p-3 rounded-lg bg-cream-50 border border-ink-900/10 focus:outline-none focus:border-clay-500 transition-colors"
                   rows="5"
-                  placeholder='Enter Your Message'
+                  placeholder="Enter your message"
                   required
                 />
               </div>
-              <button 
+              <button
                 type="submit"
-                className='bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 hover:scale-105 px-8 py-2 rounded-full'>
-                Send
+                disabled={status === 'sending'}
+                className="w-full bg-gradient-to-r from-clay-500 to-clay-600 text-cream-50 font-semibold transition-transform duration-300 hover:scale-[1.02] px-8 py-3 rounded-full disabled:opacity-60 disabled:hover:scale-100"
+              >
+                {status === 'sending' ? 'Sending…' : status === 'sent' ? 'Message Sent ✓' : status === 'error' ? 'Failed — Try Again' : 'Send Message'}
               </button>
             </form>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

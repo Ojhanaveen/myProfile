@@ -1,87 +1,57 @@
-import React from "react";
-import AboutImage from "../assets/MYICONSVG.svg";
+import React from 'react'
+import AboutImage from '../assets/MYICONSVG.svg'
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
+const stats = [
+  { value: '3', label: 'Roles Completed' },
+  { value: '4+', label: 'Major Projects' },
+  { value: '40%', label: 'Accuracy Gain Delivered' },
+]
 
 const About = () => {
+  const containerRef = useScrollReveal()
+
   return (
-    <div className="bg-black text-white py-20" id="about">
-      <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
-        <div className="flex flex-col md:flex-row items-center md:space-x-12">
-          <img
-            src={AboutImage}
-            alt=""
-            className="w-72 h-80 rounded object-cover mb-8 md:mb-0"
-          />
-          <div className="flex-1">
-            <p className="text-lg mb-8">
-              I am a passionate full-stack developer with a focus on building
-              modern and responsive web applications. With a strong foundation
-              in both frontend and backend technologies, I strive to create
-              seamless and efficient user experiences.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  HTML & CSS
-                </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
-                  <div
-                    className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-10/12"
-                  ></div>
-                </div>
-              </div>
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  React JS
-                </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
-                  <div
-                    className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-11/12"
-                  ></div>
-                </div>
-              </div>
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  Node JS
-                </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
-                  <div
-                    className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-9/12"
-                  ></div>
-                </div>
-              </div>
+    <div className="bg-cream-50 text-ink-900 py-24" id="about" ref={containerRef}>
+      <div className="container mx-auto px-6 md:px-16 lg:px-24">
+        <h2 className="reveal-up text-4xl font-bold text-center mb-16">
+          About <span className="text-transparent bg-clip-text bg-gradient-to-r from-clay-500 to-clay-700">Me</span>
+        </h2>
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="reveal-up flex-shrink-0">
+            <div className="relative w-64 h-72 md:w-72 md:h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-ink-900/5 to-ink-900/0 border border-ink-900/10 backdrop-blur-sm">
+              <img src={AboutImage} alt="" className="w-full h-full object-cover p-8" />
             </div>
-            <div className="mt-12 flex justify-between text-center">
-                <div>
-                    <h3 className="text-2xl font-bold text-transparent bg-clip-text 
-                bg-gradient-to-r from-green-400 to-blue-500">
-                       Fresher
-                    </h3>
-                    <p>Experience</p>
+          </div>
+
+          <div className="flex-1">
+            <p className="reveal-up text-lg text-ink-700/80 leading-relaxed mb-6">
+              I'm a Software Engineer with hands-on experience building and supporting scalable
+              web applications using <span className="text-ink-900 font-medium">React.js, Node.js and Python</span>.
+              I work closely with REST APIs — integrating, testing with Postman, and tracing production
+              issues through log analysis and debugging.
+            </p>
+            <p className="reveal-up text-lg text-ink-700/80 leading-relaxed mb-10">
+              I've also worked within ITSM workflows to resolve issues, automate processes, and keep
+              systems running smoothly — bridging the gap between backend logic and real user-facing
+              problems.
+            </p>
+
+            <div className="reveal-up grid grid-cols-3 gap-6">
+              {stats.map((stat) => (
+                <div key={stat.label} className="text-center rounded-xl border border-ink-900/10 bg-ink-900/5 py-5 px-2 backdrop-blur-sm">
+                  <h3 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-clay-500 to-clay-700">
+                    {stat.value}
+                  </h3>
+                  <p className="mt-1 text-xs md:text-sm text-ink-700/60">{stat.label}</p>
                 </div>
-                <div>
-                    <h3 className="text-2xl font-bold text-transparent bg-clip-text 
-                bg-gradient-to-r from-green-400 to-blue-500">
-                        2
-                    </h3>
-                    <p>Projects Completed</p>
-                </div>
-                <div>
-                    <h3 className="text-2xl font-bold text-transparent bg-clip-text 
-                bg-gradient-to-r from-green-400 to-blue-500">
-                        Do you be my client?
-                    </h3>
-                    <p>Ping me Up</p>
-                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About

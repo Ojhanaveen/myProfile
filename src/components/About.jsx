@@ -28,15 +28,15 @@ const About = () => {
             <p className="reveal-up text-lg text-ink-700/80 leading-relaxed mb-6">
               I turn ambiguous ideas into scalable, production-grade software using{' '}
               <span className="text-ink-900 font-medium">React.js, Node.js and Python</span>. My
-              craft lies in the details others skip — validating every API contract in Postman,
+              craft lies in the details others skip validating every API contract in Postman,
               reading logs like a detective, and chasing bugs to their root cause instead of
               patching symptoms.
             </p>
             <p className="reveal-up text-lg text-ink-700/80 leading-relaxed mb-10">
-              I like owning the full package — talking directly with clients, gathering
+              I like owning the full package talking directly with clients, gathering
               requirements, planning the product, and picking the right tech stack for the job
               before building, testing, and shipping it end-to-end. Through every stage of that
-              process, AI has been my biggest companion — accelerating how I learn, debug, and ship.
+              process, AI has been my biggest companion accelerating how I learn, debug, and ship.
             </p>
 
             <div className="reveal-up grid grid-cols-3 gap-6">

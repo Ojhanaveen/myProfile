@@ -5,7 +5,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 const stats = [
   { value: '3', label: 'Roles Completed' },
   { value: '4+', label: 'Major Projects' },
-  { value: '40%', label: 'Accuracy Gain Delivered' },
+  { value: '85%', label: 'Accuracy Gain Delivered' },
 ]
 
 const About = () => {
@@ -26,15 +26,17 @@ const About = () => {
 
           <div className="flex-1">
             <p className="reveal-up text-lg text-ink-700/80 leading-relaxed mb-6">
-              I'm a Software Engineer with hands-on experience building and supporting scalable
-              web applications using <span className="text-ink-900 font-medium">React.js, Node.js and Python</span>.
-              I work closely with REST APIs — integrating, testing with Postman, and tracing production
-              issues through log analysis and debugging.
+              I turn ambiguous ideas into scalable, production-grade software using{' '}
+              <span className="text-ink-900 font-medium">React.js, Node.js and Python</span>. My
+              craft lies in the details others skip — validating every API contract in Postman,
+              reading logs like a detective, and chasing bugs to their root cause instead of
+              patching symptoms.
             </p>
             <p className="reveal-up text-lg text-ink-700/80 leading-relaxed mb-10">
-              I've also worked within ITSM workflows to resolve issues, automate processes, and keep
-              systems running smoothly — bridging the gap between backend logic and real user-facing
-              problems.
+              I like owning the full package — talking directly with clients, gathering
+              requirements, planning the product, and picking the right tech stack for the job
+              before building, testing, and shipping it end-to-end. Through every stage of that
+              process, AI has been my biggest companion — accelerating how I learn, debug, and ship.
             </p>
 
             <div className="reveal-up grid grid-cols-3 gap-6">

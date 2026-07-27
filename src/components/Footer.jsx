@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <h3 className="text-xl font-bold">Naveen Kumar</h3>
-            <p className="text-ink-700/60 text-sm mt-1">Software Engineer · React.js · Node.js · Python</p>
+            <p className="text-ink-700/60 text-sm mt-1">Software Engineer · Researcher · Problem Solver</p>
           </div>
 
           <div className="flex items-center gap-4">

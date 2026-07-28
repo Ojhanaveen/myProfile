@@ -64,7 +64,7 @@ const Contact = () => {
                 <span className="w-9 h-9 rounded-full bg-ink-900/5 border border-ink-900/10 flex items-center justify-center text-clay-600">
                   <FaMapMarkerAlt />
                 </span>
-                Navi Mumbai, Maharashtra
+                Noida, Uttar Pradesh
               </div>
             </div>
 

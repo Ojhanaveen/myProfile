@@ -24,7 +24,7 @@ const Hero = () => {
   }, [])
 
   const handleResumeClick = () => {
-    window.open('/Naveen__Kumar_.pdf', '_blank')
+    window.open(`${import.meta.env.BASE_URL}Naveen_Kumar.pdf`, '_blank')
   }
 
   return (

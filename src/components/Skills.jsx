@@ -3,7 +3,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const skillGroups = [
   { title: 'Languages', items: ['JavaScript', 'Python'] },
-  { title: 'Frameworks & Libraries', items: ['React.js', 'Node.js', 'Express.js', 'Tailwind CSS', 'Bootstrap'] },
+  { title: 'Frameworks & Libraries', items: ['React.js', 'Node.js', 'Express.js', 'FastAPI', 'Tailwind CSS', 'Bootstrap'] },
   { title: 'Database', items: ['MongoDB', 'MongoDB Atlas', 'Mongoose', "PostgreSQl"] },
   { title: 'Backend', items: ['REST APIs', 'Postman',] },
   { title: 'Debugging', items: ['Log Analysis', 'Error Handling', 'Issue Troubleshooting'] },

@@ -11,6 +11,7 @@ const projects = [
       'Full-stack call/number masking platform that bridges customers and service providers without exposing real phone numbers — with live Twilio/Exotel webhook simulation and a resilient local-DB fallback.',
     tech: ['React (Vite)', 'Node.js', 'Express', 'MongoDB', 'Twilio/Exotel Webhooks'],
     icon: <FaShieldAlt />,
+    image: `${import.meta.env.BASE_URL}CallMask.png`,
     gradient: 'from-clay-600/25 to-clay-400/15',
     demo: 'https://callmask.netlify.app/',
     github: 'https://github.com/Ojhanaveen/callMask',
@@ -18,11 +19,12 @@ const projects = [
   {
     id: 2,
     name: 'Expense Tracker',
-    tagline: 'Premium Glassmorphic Financial Dashboard',
+    tagline: 'Expense Tracking Built for How India Actually Spends',
     description:
-      'Full-stack expense dashboard with JWT + HttpOnly cookie auth, rate limiting and IDOR protection, and MongoDB aggregation pipelines delivering sub-20ms categorized analytics.',
-    tech: ['React (Vite)', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB Atlas', 'Framer Motion'],
+      'SOLID-layered expense tracker that auto-captures quick commerce, food delivery, cabs, UPI and EMIs — Smart Add parses forwarded bank/UPI SMS, and an OCR + Gemini pipeline turns receipt photos or PDFs into categorized transactions.',
+    tech: ['Next.js', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'TanStack Query', 'Gemini API', 'RapidOCR'],
     icon: <FaWallet />,
+    image: `${import.meta.env.BASE_URL}ExpenseTracker.png`,
     gradient: 'from-clay-400/25 to-clay-600/15',
     demo: 'https://expense-tracker-eight-phi-22.vercel.app/login',
     github: 'https://github.com/Ojhanaveen/Expense_Tracker',
@@ -30,11 +32,12 @@ const projects = [
   {
     id: 3,
     name: 'Finma',
-    tagline: 'Role-Based Financial Management Platform',
+    tagline: 'Premium Role-Based Financial Management Engine',
     description:
-      'High-performance financial platform with JWT + RBAC across Viewer, Analyst and Admin roles, validated RESTful integrations, and structured error handling across every layer.',
-    tech: ['React.js', 'JWT / RBAC', 'REST APIs', 'Postman'],
+      'Enterprise-grade financial engine with granular RBAC across Viewer, Analyst and Admin tiers, real-time dashboards with trend and spending-breakdown analytics, and backend-enforced validation via Joi.',
+    tech: ['React 19', 'Vite', 'Node.js', 'Express 5', 'MongoDB', 'Recharts', 'Tailwind CSS'],
     icon: <FaChartLine />,
+    image: `${import.meta.env.BASE_URL}Finma.png`,
     gradient: 'from-clay-300/25 to-clay-500/15',
     demo: 'https://finma-gray-theta.vercel.app/',
     github: 'https://github.com/Ojhanaveen/Finma',
@@ -72,8 +75,12 @@ const Projects = () => {
               key={project.id}
               className="reveal-up group rounded-2xl border border-ink-900/10 bg-ink-900/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-clay-500/30 hover:-translate-y-1.5"
             >
-              <div className={`h-40 flex items-center justify-center bg-gradient-to-br ${project.gradient} text-5xl text-ink-900/80`}>
-                {project.icon}
+              <div className={`h-40 flex items-center justify-center overflow-hidden bg-gradient-to-br ${project.gradient} text-5xl text-ink-900/80`}>
+                {project.image ? (
+                  <img src={project.image} alt={`${project.name} preview`} className="w-full h-full object-cover" />
+                ) : (
+                  project.icon
+                )}
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold">{project.name}</h3>

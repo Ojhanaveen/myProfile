@@ -5,10 +5,10 @@ const skillGroups = [
   { title: 'Languages', items: ['JavaScript', 'Python'] },
   { title: 'Frameworks & Libraries', items: ['React.js', 'Node.js', 'Express.js', 'Tailwind CSS', 'Bootstrap'] },
   { title: 'Database', items: ['MongoDB', 'MongoDB Atlas', 'Mongoose', "PostgreSQl"] },
-  { title: 'Backend', items: ['REST APIs', 'Postman', 'ITSM Workflows'] },
+  { title: 'Backend', items: ['REST APIs', 'Postman',] },
   { title: 'Debugging', items: ['Log Analysis', 'Error Handling', 'Issue Troubleshooting'] },
   { title: 'Authentication', items: ['JWT (Bearer Token)', 'API Key', 'Basic Auth'] },
-  { title: 'Tools', items: ['Git', 'GitHub', 'VS Code', 'Vercel'] },
+  { title: 'Tools', items: ['Git', 'GitHub', 'VS Code', 'Vercel', 'Render'] },
 ]
 
 const Skills = () => {

@@ -54,11 +54,11 @@ const Contact = () => {
                 </span>
                 nk9411123@gmail.com
               </a>
-              <a href="tel:+917319831666" className="flex items-center gap-3 text-ink-700/80 hover:text-clay-600 transition-colors">
+              <a href="tel:+917033051916" className="flex items-center gap-3 text-ink-700/80 hover:text-clay-600 transition-colors">
                 <span className="w-9 h-9 rounded-full bg-ink-900/5 border border-ink-900/10 flex items-center justify-center text-clay-600">
                   <FaPhone />
                 </span>
-                +91 7319831666
+                +917033051916
               </a>
               <div className="flex items-center gap-3 text-ink-700/80">
                 <span className="w-9 h-9 rounded-full bg-ink-900/5 border border-ink-900/10 flex items-center justify-center text-clay-600">
